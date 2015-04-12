@@ -1,0 +1,15 @@
+<header class="app-header">
+	<h1 class="app-label">{{appTitle}}</h1>
+	{{#if app}}
+		<h1 class="clkLftBtn">
+			{{#link-to 'worldclock' class='editClocks'}}
+				<div {{action 'toggleIsEditing'}}>{{editLabel}}</div>
+			{{/link-to}}
+		</h1>
+		<h1 class="clkRgtBtn">
+			{{#link-to 'addcity' class='addCity'}}
+			  &#x2b;
+			{{/link-to}}
+		</h1>
+	{{/if}}		
+</header><!-- header -->

@@ -1,0 +1,24 @@
+<section class="content">	
+	<ul class="time-label">
+		{{#if timerSet}}
+    	<li class="timer-remaining">
+     		<span class="timer-label">{{timerLabel}}</span>
+    	</li>
+    {{else}}
+			<li class="timer-minutes">
+				{{input type='number' valueBinding='minutes' min='0' max='59' class='timer-input'}}
+			</li>
+    	<li class="timer-hours">
+    		{{input type='number' valueBinding='hours' min='0' max='23' class='timer-input'}}
+			</li>
+    {{/if}}
+	</ul><!-- time-label -->			
+	<ul class="timer-buttons">
+		{{#round-button action='leftAction' liClass=leftLiClass buttonClass=leftButtonClass}}
+			{{leftButtonName}}
+		{{/round-button}}
+		{{#round-button action='rightAction' liClass=rightLiClass buttonClass=rightButtonClass}}
+			{{rightButtonName}}
+		{{/round-button}}
+	</ul><!-- timer-buttons -->
+</section><!-- content -->

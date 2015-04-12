@@ -1,0 +1,15 @@
+<div class='city-entry'>
+	{{#if isEditing}}
+		<button {{action 'removeClock' cityId}} class='delete-button'>&#x2014;</button>
+	{{/if}}
+  <span class='city-name'>{{name}}</span>
+  <span class='city-time'>{{time}}</span>
+  <br />
+  {{#if isEditing}}
+  	<button class='delete-btn-placehold'></button>
+  {{/if}}
+  <span class='city-day'>{{day}}</span>
+  {{#unless local}}
+  	<span class='city-time-diff'>, {{hours}} hours {{ahead}}</span>
+  {{/unless}}
+</div><!-- city-entry -->

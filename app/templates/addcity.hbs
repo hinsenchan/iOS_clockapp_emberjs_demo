@@ -1,0 +1,26 @@
+<div class="addcity-header">
+	<div class="addcity-title">Choose a City.</div>
+	<div class="addcity-input">
+		<span>{{input type='text' value=searchText class='addcity-searchText'}}</span>
+		<span>{{#link-to 'worldclock' class="addcity-cancel"}}Cancel{{/link-to}}</span>
+	</div>
+</div><!-- header -->
+
+<section class="addcity-content">
+	<div class="result-list">
+		<div>
+			{{#each result in searchResults}}
+				<div class='result-header-col'>
+					<span class='result-header'>{{result.header}}</span>
+				</div>
+				{{#each name in result.cityName}}	
+					{{#link-to 'worldclock' class='result-entry-anchor'}}								
+						<div class='result-entry' {{action 'addcity' result.header name}}>
+							<span class='result-entry-padding'>{{name}}</span>
+						</div>										
+					{{/link-to}}
+				{{/each}}
+			{{/each}}
+		</div>
+	</div><!-- cities-list -->
+</section><!-- content -->

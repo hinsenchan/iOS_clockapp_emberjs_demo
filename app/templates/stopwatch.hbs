@@ -1,0 +1,17 @@
+<section class="content">
+	<div class="stopwtch-time">
+		<div class='elapsed-time'>{{elapsedTimeLabel}}</div>
+		<div class="elapsed-lap">{{elapsedLapLabel}}</div>
+	</div><!-- stopwtch-time -->
+	<ul class="stopwtch-buttons">
+		{{#round-button action='leftAction' liClass=leftLiClass buttonClass=leftButtonClass}}
+			{{leftButtonName}}
+		{{/round-button}}
+		{{#round-button action='rightAction' liClass=rightLiClass buttonClass=rightButtonClass}}
+			{{rightButtonName}}
+		{{/round-button}}
+	</ul><!-- stopwtch-buttons -->
+  <div class ="laps-list">
+  	{{lapTimeList}}
+	</div><!-- laps-list -->
+</section><!-- content -->        

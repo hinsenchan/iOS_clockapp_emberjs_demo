@@ -1,0 +1,9 @@
+<section class="content">
+	<div class="cities-list">
+		{{#each}}
+			{{show-clock name=cityName time=placeholderTime day=placeholderDay
+				hours=placeholderHours ahead=placeholderIsAhead local=placeholderIsLocalTime 
+				isEditing=isEditing cityId=id idToRemove=idToRemove}}
+		{{/each}}		
+	</div><!-- cities-list -->
+</section><!-- content -->

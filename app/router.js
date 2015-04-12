@@ -5,6 +5,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('addcity');
+	this.resource('worldclock');
+	this.resource('timer');
+	this.resource('stopwatch');
 });
 
 export default Router;

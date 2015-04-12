@@ -1,3 +1,540 @@
-html, body {
-  margin: 20px;
+* {
+	font-family: "HelveticaNeue-Light", Arial;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.background-color {
+	background-color: white;	
+}
+
+header.app-header {
+	width: 100%;
+	height: 64px;
+	position: fixed;
+	top: 0px;
+	background-color: #efefef;	
+	border-bottom: 1px solid #ccc;
+}
+
+h1.app-label {
+	width: 100%;
+	position: fixed;
+	padding-top: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+section.content {
+}
+
+.cities-list {
+	width: 100%;
+	margin-top: 66px;
+	margin-bottom: 46px;
+}
+
+.city-entry {
+	height: 60px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: white;	
+	border-bottom: 1px solid #ccc;	
+}
+
+.city-name {
+	font-size: 20px;
+}
+
+.city-time {
+	font-size: 25px;
+	float: right;
+}
+
+.city-day {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.city-time-diff {
+	font-size: 12px;	
+}
+
+ul.time-label {
+	width: 100%;
+	height: 160px;
+	position: fixed;
+	top: 66px;
+	display: inline;
+	list-style-type: none;
+	background-color: white;	
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+    font-size: 90px;
+}
+
+li.timer-hours {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+li.timer-minutes {
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+
+li.timer-remaining {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  //display: none;
+}
+
+input.timer-input {
+	width: 100%;
+	height: 100%;
+	font-size: 90px;
+	outline: none;
+	border: 0px solid;
+	text-align: center;
+	vertical-align: middle;
+}
+
+span.timer-label {
+  font-size: 90px;
+}
+
+ul.timer-buttons {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 224px;	
+	bottom: 46px;
+	display: inline;
+	list-style-type: none;
+	background-color: #efefef;
+}
+
+li.timer-start {
+	position: absolute;
+	width: 80px;
+	top: 20px;
+	left: 33%;
+	margin-left: -40px;
+	color: green;
+}
+
+li.timer-cancel {
+  position: absolute;
+	width: 80px;
+	top: 20px;
+	left: 33%;
+	margin-left: -40px;
+	color: red;
+  //display: none;
+}
+
+li.timer-pause {
+	position: absolute;
+	width: 80px;
+	top: 20px;
+	left: 66%;
+	margin-left: -40px;
+	color: grey;
+}
+
+li.timer-resume {
+	position: absolute;
+	width: 80px;
+	top: 20px;
+	left: 66%;
+	margin-left: -40px;
+	color: black;
+  //display: none
+}
+
+button {
+  outline: none;
+}
+
+button.start-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid green;
+	border-radius: 80px;
+	font-size: 15px;
+	color: green;
+	background-color: white;
+}
+
+button.cancel-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid red;
+	border-radius: 80px;
+	font-size: 15px;
+	color: red;
+	background-color: white;
+}
+
+button.pause-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+	border-radius: 80px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+}
+button.pause-icon-disabled {
+	width: 80px;
+	height: 80px;
+	border: 1px solid lightgray;
+	border-radius: 80px;
+	font-size: 15px;
+	color: lightgray;
+	background-color: white;
+}
+
+button.resume-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+	border-radius: 80px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+}
+
+div.stopwtch-time {
+	width: 100%;
+	height: 160px;
+	position: fixed;
+	top: 65px;
+	background-color: white;	
+	border-bottom: 1px solid #ccc;
+}
+
+div.elapsed-time {
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	font-family: "HelveticaNeue-UltraLight";
+	font-size: 70px;
+	text-align: center;
+}
+
+div.elapsed-lap {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 18px;
+	color: #ccc;
+}
+
+ul.stopwtch-buttons {
+	width: 100%;
+	height: 119px;
+	position: fixed;
+	top: 226px;	
+	display: inline;
+	list-style-type: none;
+	border-bottom: 1px solid #ccc;
+	background-color: #efefef;		
+}
+
+li.stopwtch-start {
+	position: absolute;
+	width: 80px;
+	top: 20px;	
+	bottom: 19px;
+	left: 33%;
+	margin-left: -40px;
+	background-color: #efefef;		
+}
+
+li.stopwtch-stop {
+	position: absolute;
+	width: 80px;
+	top: 20px;	
+	bottom: 19px;
+	left: 33%;
+	margin-left: -40px;
+	background-color: #efefef;	
+  //display: none;
+}
+
+li.stopwtch-lap {
+	position: absolute;
+	width: 80px;
+	top: 20px;
+	bottom: 19px;
+	left: 66%;
+	margin-left: -40px;
+	background-color: #efefef;		
+}
+
+li.stopwtch-reset {
+	position: absolute;
+	width: 80px;
+	top: 20px;
+	bottom: 19px;
+	left: 66%;
+	margin-left: -40px;
+	background-color: #efefef;	
+  //display: none;
+}
+
+button.start-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid green;
+	border-radius: 80px;
+	font-size: 15px;
+	color: green;
+	background-color: white;
+}
+
+button.stop-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid red;
+	border-radius: 80px;
+	font-size: 15px;
+	color: red;
+	background-color: white;
+}
+
+button.lap-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+	border-radius: 80px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+}
+
+button.lap-icon-disabled {
+	width: 80px;
+	height: 80px;
+	border: 1px solid lightgray;
+	border-radius: 80px;
+	font-size: 15px;
+	color: lightgray;
+	background-color: white;
+}
+
+button.reset-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+	border-radius: 80px;
+	font-size: 15px;
+	color: black;
+	background-color: white;
+}
+
+div.laps-list {	
+    margin-top: 344px;
+	width: 100%;
+	bottom: 46px;
+	border-top: 1px solid #ccc;
+	background-color: #efefef;	
+}
+
+div.lap {	
+	width: 100%;
+	height: 39px;
+	line-height: 39px;
+	border-bottom: 1px solid #ccc;
+}
+
+span.lap-num {
+	height: 100%;
+	margin-left: 10px;
+	float: left;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #555;
+}
+
+span.lap-time {
+	height: 100%;
+	margin-right: 20%;
+	float: right;
+	vertical-align: middle;	
+	font-size: 22px;
+}
+
+footer.app-footer {
+	width: 100%;
+	height: 44px;
+	position: fixed;
+	bottom: 0px;
+	background-color: #efefef;
+	border-top: 1px solid #ccc;
+	font-size: 12px;
+}
+
+ul.nav-menu {
+	display: inline;
+	list-style-type: none;
+  background-color: #efefef;
+	text-align: center;		
+}
+
+li.nav-icons {
+	width: 33.33%;
+	float: left;	
+}
+
+a.nav-achrs {
+	text-decoration: none;
+	color: #aaa;	
+}
+
+a.nav-achrs:hover {
+    color: red;
+}
+
+#worldclock, #timer, #stopwatch {
+    display: none;
+}
+
+#worldclock.show, #timer.show, #stopwatch.show {
+    display: block;
+}
+
+h1.clkLftBtn {
+	left: 20px;
+	position: fixed;
+	padding-top: 30px;
+	font-size: 18px;
+	color: red;	
+}
+
+h1.clkRgtBtn {
+	right: 20px;
+	position: fixed;
+	margin-top: 15px;
+	font-size: 36px;
+	font-weight: normal;
+	color: red;	
+}
+
+a.editClocks {
+	text-decoration: none;
+	color: red;	
+}
+
+a.addCity {
+	text-decoration: none;
+	color: red;
+}
+
+.delete-button {
+	width: 22px;
+	height: 22px;
+	line-height: 0px;
+	padding-bottom: 3px;
+	border: 1px solid;
+	border-radius: 22px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background-color: red;	
+	cursor: pointer;
+}
+
+.delete-btn-placehold {
+	visibility: hidden;
+	width: 22px;
+	height: 22px;
+	line-height: 0px;
+	padding-bottom: 3px;
+	border: 1px solid;
+	border-radius: 22px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	background-color: red;		
+}
+
+.addcity-header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0px;
+	background-color: #efefef;	
+	border-bottom: 1px solid #ccc;
+}
+
+.addcity-title {
+	text-align: center;	
+	padding-top: 15px;
+	font-size: 18px;
+	padding-bottom: 7px;
+}
+
+.addcity-input {
+
+}
+
+.addcity-searchText {
+	background-color: #efefef;
+	width: 70%;
+	float: left;
+	position: relative;
+	font-size: 18px;
+	left: 20px;
+}
+
+a.addcity-cancel {
+	color: red;
+	float: right;
+	text-decoration: none;
+	position: relative;
+	font-size: 18px;
+	right: 20px;
+}
+
+.addcity-content {
+	margin-top: 80px;
+}
+
+.result-list {
+
+}
+
+.result-header-col {
+	background-color: #efefef;
+	border-bottom: 1px solid #ccc;
+}
+
+.result-header {
+	padding-left: 20px;
+}
+
+.result-entry-anchor {
+	text-decoration: none;
+}
+
+.result-entry {
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc
+}
+
+.result-entry-padding {
+	padding-left: 20px;
 }
