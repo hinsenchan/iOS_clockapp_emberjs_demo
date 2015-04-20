@@ -28,31 +28,31 @@ The World Clock and Timer refreshes its display time every second using Ember's 
 
 ### Search: query the list of cities from the JSON API
 
-#### The query will attempt to auto-complete as the user is typing.
+The query will attempt to auto-complete as the user is typing.
 
 ![img7_worldclock_add](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img7_worldclock_add.png)
 
-#### The search results are alphabetized and scrollable.
+The search results are alphabetized and scrollable.
 
 ![img8_worldclock_scrolladdlist](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img8_worldclock_scrolladdlist.png)
 
 ### Add: target city can be added to the list of clocks displayed
 
-#### Target clock is added to the main clock list.
+Target clock is added to the main clock list.
 
 ![img9_worldclock_addedClock](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img9_worldclock_addedClock.png)
 
 ### Remove: delete stored clocks from the list
 
-#### Edit opens up the function to delete clocks. Click the icon to remove a clock.
+Edit opens up the function to delete clocks. Click the icon to remove a clock.
 
 ![img10_worldclock_edit](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img10_worldclock_edit.png)
 
-#### Clock has been removed.
+Clock has been removed.
 
 ![img11_worldclock_removedCity](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img11_worldclock_removedCity.png)
 
-#### Click done to exit the edit mode.
+Clicking done exits the edit mode.
 
 ![img12_worldclock_completedEdit](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/img12_worldclock_completedEdit.png)
 
