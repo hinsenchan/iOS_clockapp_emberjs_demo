@@ -4,8 +4,6 @@ It is a lightweight, web app demonstration of the clock app from iOS. The clock 
 
 Utilizing the power of the Ember.js framework, the clock app is developed using only a single page. It functions as both a native-style mobile and desktop web application. Its components are modularized to ensure its maintainability, reusability, and extendability. The clock app contains a World Clock, Timer, and Stopwatch function. Each of these functions appear as its own page to the user. The state of each clock function can operate individually, so all 3 "pages" may run at the same time. This implementation allows you to move between each function without terminating its previously set states.
 
-# Mockup
-
 ## Mobile
 
 ![mobile_collage](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/mobile_collage.png)
