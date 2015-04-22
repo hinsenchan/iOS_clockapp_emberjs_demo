@@ -6,11 +6,11 @@ Utilizing the power of the Ember.js framework, the clock app is developed using 
 
 ## Mobile
 
-![mobile_collage](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/mobile_collage.png)
+![clockapp_ember_collage](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/clockapp_ember_collage.png)
 
 ## Desktop
 
-![desktop_collage](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/desktop_collage.png)
+![clockapp_ember_desktop_collage](https://github.com/hinsenchan/iOS_clockapp_emberjs_demo/blob/master/readme/clockapp_ember_desktop_collage.png)
 
 # Features
 
